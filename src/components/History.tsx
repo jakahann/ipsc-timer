@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Paper, Stack, Text, Group, Accordion, SimpleGrid, Box, ThemeIcon } from '@mantine/core';
+import React from 'react';
+import { Paper, Stack, Text, Group, Accordion, SimpleGrid, ThemeIcon } from '@mantine/core';
 import { useTimerContext } from '../context';
 import { formatTime } from '../useTimer';
 
@@ -77,7 +77,7 @@ export const History: React.FC = () => {
                       <Text size="sm" c="dimmed">No splits recorded</Text>
                     ) : (
                       session.splits.map((split, idx) => (
-                        <Group key={idx} justify="space-between" p="sm" radius="md" className="bg-slate-700/30">
+                        <Group key={idx} justify="space-between" p="sm" className="bg-slate-700/30 rounded-md">
                           <Group gap="sm">
                             <ThemeIcon size="sm" radius="full" className="bg-gradient-to-br from-cyan-500 to-blue-500">
                               <Text size="xs" fw={700} c="white">{idx + 1}</Text>

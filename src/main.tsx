@@ -11,11 +11,10 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <MantineProvider 
       theme={{
-        colorScheme: 'dark',
+        primaryColor: 'cyan',
         colors: {
           dark: ['#C1C2C5', '#A6A7AB', '#909296', '#5c5f66', '#373A40', '#2C2E33', '#25262b', '#16171b', '#0f1117', '#030303'],
         },
-        primaryColor: 'cyan',
       }}
     >
       <TimerProvider>

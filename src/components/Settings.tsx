@@ -1,6 +1,5 @@
 import React from 'react';
 import { Paper, Stack, Text, SegmentedControl, Slider, Group, Box, Card } from '@mantine/core';
-import { IconSettings, IconMicrophone, IconClock } from '@tabler/icons-react';
 import { useTimerContext } from '../context';
 
 export const Settings: React.FC = () => {
@@ -91,7 +90,7 @@ export const Settings: React.FC = () => {
               </Stack>
             </Card>
 
-            <Box p="md" radius="md" className="bg-purple-500/10 border-2 border-purple-500/30">
+            <Box p="md" className="bg-purple-500/10 border-2 border-purple-500/30 rounded-md">
               <Text size="xs" fw={700} c="purple.2" mb="xs">
                 💡 Current Range
               </Text>
@@ -136,7 +135,7 @@ export const Settings: React.FC = () => {
             </Stack>
           </Card>
 
-          <Box p="md" radius="md" className="bg-blue-500/10 border-2 border-blue-500/30">
+          <Box p="md" className="bg-blue-500/10 border-2 border-blue-500/30 rounded-md">
             <Text size="xs" fw={700} c="blue.2" mb="sm">
               💡 Recommended Levels
             </Text>

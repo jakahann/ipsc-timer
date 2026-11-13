@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Paper, Stack, Text, Group, Button, Select, NumberInput, Textarea, Badge, ActionIcon, Modal, Card } from '@mantine/core';
+import { Paper, Stack, Text, Group, Button, Select, NumberInput, ActionIcon, Modal, Card } from '@mantine/core';
 import { IconPlus, IconTrash } from '@tabler/icons-react';
 import { useDrillsContext } from '../drillsContext';
 
@@ -163,7 +163,7 @@ export const Drills: React.FC = () => {
             <Text size="sm" fw={600} mb="xs">Number of Targets</Text>
             <NumberInput
               value={formData.targetCount}
-              onChange={(val) => setFormData({ ...formData, targetCount: val || 1 })}
+              onChange={(val) => setFormData({ ...formData, targetCount: typeof val === 'number' ? val : 1 })}
               min={1}
               max={20}
             />
@@ -173,7 +173,7 @@ export const Drills: React.FC = () => {
             <Text size="sm" fw={600} mb="xs">Shots Per Target</Text>
             <NumberInput
               value={formData.shotsPerTarget}
-              onChange={(val) => setFormData({ ...formData, shotsPerTarget: val || 1 })}
+              onChange={(val) => setFormData({ ...formData, shotsPerTarget: typeof val === 'number' ? val : 1 })}
               min={1}
               max={20}
             />
