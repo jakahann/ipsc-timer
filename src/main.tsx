@@ -7,6 +7,13 @@ import { DrillsProvider } from './drillsContext.tsx'
 import '@mantine/core/styles.css'
 import './index.css'
 
+// Register service worker for PWA support
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/service-worker.js').catch((error) => {
+    console.log('Service Worker registration failed:', error);
+  });
+}
+
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <MantineProvider 
