@@ -14,7 +14,7 @@ interface DrillsContextType {
   selectedDrillId: string | null;
   selectedDrill: Drill | null;
   
-  setSelectedDrill: (id: string) => void;
+  setSelectedDrill: (id: string | null) => void;
   addDrill: (drill: Omit<Drill, 'id' | 'isCustom'>) => void;
   removeDrill: (id: string) => void;
   loadDrills: () => void;
@@ -67,7 +67,7 @@ const DEFAULT_DRILLS: Drill[] = [
 
 export const DrillsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [drills, setDrills] = useState<Drill[]>(DEFAULT_DRILLS);
-  const [selectedDrillId, setSelectedDrillId] = useState<string | null>('bill-drill');
+  const [selectedDrillId, setSelectedDrillId] = useState<string | null>(null);
 
   const loadDrills = useCallback(() => {
     const stored = localStorage.getItem('ipsc-drills');

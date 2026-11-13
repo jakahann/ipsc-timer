@@ -73,7 +73,7 @@ export const TimerDisplay: React.FC<Props> = ({
             </Group>
           </Group>
 
-          {selectedDrill && (
+          {selectedDrill ? (
             <Group gap="md" w="100%" justify="center">
               <Badge size="lg" radius="md" variant="light" color="blue">
                 📌 {selectedDrill.name}
@@ -82,6 +82,10 @@ export const TimerDisplay: React.FC<Props> = ({
                 {selectedDrill.targetCount} targets × {selectedDrill.shotsPerTarget} shots
               </Text>
             </Group>
+          ) : (
+            <Badge size="lg" radius="md" className="bg-gradient-to-r from-indigo-500 to-purple-500">
+              🎯 FREE MODE
+            </Badge>
           )}
 
           <div className="py-6 px-8 w-full text-center bg-gradient-to-r from-slate-900/50 to-slate-800/50 rounded-lg border border-slate-700/30">

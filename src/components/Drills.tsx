@@ -34,16 +34,16 @@ export const Drills: React.FC = () => {
 
           <Select
             label="Available Drills"
-            placeholder="Choose a drill"
+            placeholder="Choose a drill or use free mode"
             value={selectedDrillId}
-            onChange={(id) => id && setSelectedDrill(id)}
+            onChange={(id) => setSelectedDrill(id || null)}
             data={drills.map((d) => ({
               value: d.id,
               label: `${d.name} (${d.targetCount}T × ${d.shotsPerTarget}S)`,
               disabled: false,
             }))}
             searchable
-            clearable={false}
+            clearable
             className="[&_input]:font-bold"
           />
 
