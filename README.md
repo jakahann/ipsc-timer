@@ -45,37 +45,30 @@ npm run lint
 
 ## Deployment
 
-### Vercel (Recommended)
+### 🚀 Quick Deploy to Vercel (Easiest)
 
-This app is pre-configured for Vercel deployment with optimized build settings.
-
-**Option 1: Manual Push Deploy**
+**Option A: Using the deploy script**
 ```bash
-# Push to your GitHub repository
-git push origin main
-
-# Then connect your repo to Vercel via dashboard
-# Vercel will auto-detect settings and deploy
+./deploy.sh
+# Follow the prompts to deploy to preview or production
 ```
 
-**Option 2: Vercel CLI**
+**Option B: Manual Vercel CLI**
 ```bash
-# Install Vercel CLI
-npm i -g vercel
-
-# Deploy
-vercel
+# Preview deployment
+npx vercel
 
 # Production deployment
-vercel --prod
+npx vercel --prod
 ```
 
-**Option 3: GitHub Integration**
+**Option C: Connect GitHub (Recommended for continuous deployment)**
 1. Push code to GitHub
-2. Go to [vercel.com](https://vercel.com)
-3. Click "Add New" > "Project"
-4. Select your repository
-5. Vercel auto-configures and deploys
+2. Go to [vercel.com](https://vercel.com) → New Project
+3. Import your GitHub repository
+4. Vercel auto-detects settings and deploys automatically ✅
+
+See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed instructions and troubleshooting.
 
 ### Other Platforms
 
